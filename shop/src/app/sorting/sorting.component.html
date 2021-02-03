@@ -1,0 +1,8 @@
+<span>
+Sort:
+<select size="1" [selectedIndex]="-1" #sortField (change)="applySorting(sortField.value)">
+  <option value="price-high-low">Price high to low</option>
+  <option value="price-low-high">Price low to high</option>
+  <option value="rating">Rating</option>
+</select>
+</span>

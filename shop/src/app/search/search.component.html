@@ -1,0 +1,7 @@
+<span>
+  <input type="search" 
+    #searchText 
+    placeholder="Enter a search text"
+    (keyup.enter)="applySearch(searchText.value)"/>
+  <button (click)="applySearch(searchText.value)">Search</button>
+</span>

@@ -1,0 +1,18 @@
+<nav class="navbar fixed-top navbar-light bg-light">
+  <app-search></app-search>
+  <app-sorting></app-sorting>
+  <app-cart></app-cart>
+
+  <div class="account">
+    Account
+    <div>
+      <div *ngIf="authSvc.isLoggedIn()">
+        Welcome {{authSvc.userProfile.name}}</div>
+      <p *ngIf="!authSvc.isLoggedIn()" routerLink="/login">Login</p>
+      <p *ngIf="authSvc.isLoggedIn()"
+      routerLink="/order-history">Orders</p>
+      <p *ngIf="authSvc.isLoggedIn()"
+      (click)="authSvc.logout()">Logout</p>
+    </div>
+  </div>
+</nav>

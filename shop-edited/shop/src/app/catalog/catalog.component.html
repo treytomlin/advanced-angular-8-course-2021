@@ -1,0 +1,8 @@
+<div [appGridLayout]="2">
+  <div *ngFor="let p of displayCatalog">
+    <app-product-card [product]="p"></app-product-card>
+  </div>
+</div>
+<div *ngIf="displayCatalog.length == 0">
+  Sorry, we found nothing matching your search.
+</div>

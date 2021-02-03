@@ -1,0 +1,39 @@
+img {
+    width: 26px;
+    height: 26px;
+}
+
+.title-bar {
+    position: relative;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: #cfcfcf thin solid;
+    font-size: 18pt;
+    font-style: bold;
+}
+
+.title-bar span {
+    position: absolute;
+    right: 0px;
+}
+
+.title-bar img {
+    width: 20px;
+    height: 20px;
+}
+
+.cart-details {
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.qty {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+button {
+    margin: 10px;
+}

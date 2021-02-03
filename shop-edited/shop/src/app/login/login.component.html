@@ -1,0 +1,10 @@
+<div class="form-signin">
+    <h1>please sign in</h1>
+    <div class="alert alert-danger" *ngIf="errorMsg">{{errorMsg}}</div>
+    <label>User id</label>
+    <input type="text" class="form-control" #userId>
+    <label>Password</label>
+    <input type="password" class="form-control" #password>
+    <button class="btn btn-primary btn-block"
+    (click)="login(userId.value, password.value)">Sign in</button>
+    </div>

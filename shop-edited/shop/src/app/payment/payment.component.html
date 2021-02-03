@@ -1,0 +1,22 @@
+<form [formGroup]="paymentForm">
+  <label>CARD NUMBER</label>
+  <input type="text" class="form-control" formControlName="ccNumber" />
+
+  <div class="row">
+    <div class="col">
+      <label>EXPIRATION DATE</label>
+      <input type="text" class="form-control" placeholder="MM / YY" formControlName="ccExp" />
+    </div>
+    <div class="col">
+      <label>CV CODE</label>
+      <input type="text" class="form-control" formControlName="ccCVC" />
+    </div>
+  </div>
+
+  <label>COUPON CODE</label>
+  <input type="text" class="form-control" formControlName="couponCode" />
+
+  <button class="btn btn-primary btn-lg" [disabled]="paymentForm.invalid" (click)="makePayment()">Make Payment</button>
+</form>
+
+<cool-progress image="assets/loading.svg" *ngIf="showProgress"></cool-progress>

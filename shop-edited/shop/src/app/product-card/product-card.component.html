@@ -1,0 +1,27 @@
+<div class="card mb-3">
+  <img class="card-img-top" [src]="product.image" alt="{{product.name}}">
+  <div class="card-body">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">{{product.description}}</p>
+    <p class="card-text"><b>Price:</b> ${{product.price}}</p>
+    <p class="card-text"><b>Rating:</b> {{product.rating}}/5</p>
+    <a href class="btn btn-primary" (click)="addToCart()">Add to Cart</a>
+    <img src="assets/share.svg" class="share" (click)="openMenu($event)"/>
+  </div>
+</div>
+
+<app-popup-menu>
+  <p class="title">Share with others</p>
+  <div class="items">
+    <p (click)="share('facebook')">
+      <img src="assets/facebook.svg"/> Facebook
+    </p>
+    <p (click)="share('twitter')">
+      <img src="assets/twitter.svg"/> Twitter
+    </p> <p (click)="share('instagram')">
+      <img src="assets/instagram.svg"/> Instagram
+    </p> <p (click)="share('email')">
+      <img src="assets/email.svg"/> E-mail
+    </p>
+  </div>
+</app-popup-menu>

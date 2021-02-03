@@ -1,0 +1,24 @@
+.account {
+    position: relative;
+    width: 200px;
+}
+
+.account > div {
+    position: absolute;
+    display: none;
+    background: white;
+}
+
+.account:hover > div {
+    display: block;
+}
+
+p {
+    width: 200px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+p:hover {
+    background: #cfcfcf;
+}
